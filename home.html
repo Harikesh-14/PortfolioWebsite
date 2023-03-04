@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <script src="https://kit.fontawesome.com/e6506fb756.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/e6506fb756.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-side">
+            <div class="upperPart">
+                <ul>
+                    <h1>Harikesh Ranjan Sinha</h1>
+                    <p>---Frontend Web-Developer---</p>
+                    <li onmouseover="dispHome()" onmouseout="backToNormal()">Home</li>
+                    <li id="aboutme" onmouseover="dispAboutMe()" onmouseout="backToNormal()">About Me</li>
+                    <li id="myskills" onmouseover="dispMySkills()" onmouseout="backToNormal()">My Skills</li>
+                    <li id="contactme" onmouseover="dispContactMe()" onmouseout="backToNormal()">Contact Me</li>
+                </ul>
+            </div>
+            <div class="lowerPart">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+        </div>
+        <div class="right-side">
+            <img src="img/profile-pic.jpeg" alt="Profile Picture">
+            <p id="paraChange">Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking.</p>
+        </div>
+    </div>
+</body>
+<script>
+    let aboutme = document.getElementById('aboutme');
+    let myskills = document.getElementById('myskills');
+    let para = document.getElementById('paraChange');
+
+    function dispHome(){
+        para.innerHTML = "You are already on the homepage. Try some other options 🙂"
+    }
+    
+    function dispAboutMe(){
+        para.innerHTML = "Currently, less than ten percent of the global ocean is mapped using modern sonar technology. But if you want to know more about me, then smash that button 😄";
+    }
+
+    function dispMySkills(){
+        para.innerHTML = "What skills do you have? You can tell me about your skills by clicking on 'Contact Me' button. But if you want to know about my skills then you can click here 😉";
+    }
+
+    function dispContactMe(){
+        para.innerHTML = "Hey...what are you thinking? Tell me about your skills or if you want to share anything with me, then you are more welcome 😙"
+    }
+
+    function backToNormal(){
+        para.innerHTML = "Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking.";
+    }
+</script>
+</html>

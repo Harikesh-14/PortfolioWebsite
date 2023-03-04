@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',  sans-serif;
+}
+
+body{
+    background-color: #16213E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    height: 90vh;
+    width: 90vw;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .left-side{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container .left-side .upperPart{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container .left-side .upperPart ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .left-side .upperPart ul h1{
+    color: #E94560;
+    font-family: 'Gajraj One', cursive;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+}
+
+.main-container .left-side .upperPart ul p{
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Genos', sans-serif;
+}
+
+.main-container .left-side .upperPart ul li{
+    width: 40%;
+    text-align: center;
+    list-style-type: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+    left: 10%;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 120%;
+    color: #fff;
+    box-shadow: 0 0 5px #ffffff3c;
+}
+
+.main-container .left-side .upperPart ul li:nth-child(even):hover{
+    transform: skew(10deg);
+    animation-name: leftright;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes leftright {
+    0%{
+        transform: skew(10deg);
+    }
+    50%{
+        transform: skew(-10deg);
+    }
+    100%{
+        transform: skew(10deg);
+    }
+}
+
+.main-container .left-side .upperPart ul li:nth-child(odd):hover{
+    transform: skew(-10deg);
+    animation-name: rightleft;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rightleft {
+    0%{
+        transform: skew(-10deg);
+    }
+    50%{
+        transform: skew(10deg);
+    }
+    100%{
+        transform: skew(-10deg);
+    }
+}
+
+.main-container .left-side .lowerPart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.main-container .left-side .lowerPart i{
+    font-size: 40px;
+    color: #E94560;
+    margin: 0 10px;
+    cursor: pointer;
+    transition-property: transform color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.main-container .left-side .lowerPart i:hover{
+    transform: translateY(-10px);
+    color: #B25068;
+}
+
+.main-container .right-side{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .right-side img{
+    position: absolute;
+    height: 40vh;
+    width: 40vh;
+    top: 15vh;
+    border: 2px solid #16213E;
+    border-radius: 100%;
+    box-shadow: 0 0 10px #000000;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.main-container .right-side p{
+    position: absolute;
+    top: 52vh;
+    margin-top: 5vh;
+    width: 30vw;
+    color: #EEEEEE;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: genos;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+@media only screen and (max-width: 600px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-container{
+        position: absolute;
+        top: 1vh;
+    }
+
+    .main-container .right-side{
+        position: relative;
+        top: -15vh;
+        left: -35vw;
+    }
+
+    .main-container .right-side img{
+        height: 25vh;
+        width: 25vh;
+        left: -15vw;
+    }
+
+    .main-container .right-side p{
+        position: relative;
+        top: 5vh;
+        left: -15vw;
+        width: 85vw;
+        height: auto;
+    }
+
+    .main-container .left-side{
+        position: relative;
+        top: 35vh;
+        left: 25vw;
+    }
+
+    .main-container .left-side .upperPart h1{
+        width: 90vw;
+    }
+}
